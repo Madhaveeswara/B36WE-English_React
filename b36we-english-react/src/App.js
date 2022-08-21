@@ -2,8 +2,29 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const users = [
+    {
+      title:"Madhav",
+      pic:"pic2.jpg"
+    },
+    {
+      title:"Nelly",
+      pic:"pic1.jpg"
+    },
+    {
+      title:"Muller",
+      pic:"pic3.jpg"
+    },
+  ]
   return (
     <div className="App">
+
+      {
+        users.map(({title, pic}) => {
+          <Msg name={title} pic={pic} />
+        })
+      }
      
       <Msg name="Madhav" pic="pic2.jpg" />
       <Msg name="Max" pic="pic1.png" />
